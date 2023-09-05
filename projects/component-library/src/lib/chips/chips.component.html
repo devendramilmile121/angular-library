@@ -1,0 +1,11 @@
+<mat-chip-listbox [attr.aria-label]="ariaLabel">
+  <mat-chip-option
+    *ngFor="let item of items"
+    [color]="item.color"
+    [value]="item.value"
+    [removable]="isRemovable"
+    [selectable]="isSelectable"
+    (selectionChange)="selectionChanged($event)"
+    >{{ item.label }}</mat-chip-option
+  >
+</mat-chip-listbox>

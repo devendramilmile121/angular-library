@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 8px; // set 1 rem = 8px
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.body {
+    height: 100%;
+    width: 100%;
+}
+
+// root component style
+cg-root {
+    height: 100%;
+    width: 100%;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

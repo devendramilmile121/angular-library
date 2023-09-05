@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Chips } from 'component-library';
 
 @Component({
   selector: 'cg-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ComponentGallery';
+
+  chipItems: Chips[] = [
+    {
+      color: 'accent',
+      label: 'Devendra',
+      value: 'devendram'
+    }
+  ]
 }
