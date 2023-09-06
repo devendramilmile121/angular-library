@@ -1,0 +1,29 @@
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.m-0 {
+    margin: 0px;
+}
+
+.row-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.border {
+    border: 1px solid gainsboro;
+}
+
+.p-1 {
+    padding: 1rem;
+}
+
+h4, h2 {
+    margin-block: 0px;
+}

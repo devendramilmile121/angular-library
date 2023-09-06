@@ -1,11 +1,16 @@
 <mat-chip-listbox [attr.aria-label]="ariaLabel">
   <mat-chip-option
     *ngFor="let item of items"
-    [color]="item.color"
+    [ngClass]="item.color"
     [value]="item.value"
     [removable]="isRemovable"
     [selectable]="isSelectable"
     (selectionChange)="selectionChanged($event)"
-    >{{ item.label }}</mat-chip-option
+    (removed)="onRemoved($event)"
+    >{{ item.label }}
+    <button *ngIf="isRemovable" matChipRemove [attr.aria-label]="'remove ' + item.label">
+      <mat-icon>cancel</mat-icon>
+    </button>
+    </mat-chip-option
   >
 </mat-chip-listbox>

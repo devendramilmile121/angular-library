@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Chips } from './types/chip-type';
-import { MatChipSelectionChange } from '@angular/material/chips';
+import { MatChipEvent, MatChipSelectionChange } from '@angular/material/chips';
 
 @Component({
   selector: 'cl-chips',
@@ -16,7 +16,13 @@ export class ChipsComponent {
   @Output() selectionChange: EventEmitter<MatChipSelectionChange> =
     new EventEmitter();
 
+  @Output() removed: EventEmitter<MatChipEvent> = new EventEmitter();
+
   selectionChanged(event: MatChipSelectionChange) {
     this.selectionChange.emit(event);
+  }
+
+  onRemoved(event: MatChipEvent): void {
+    this.removed.emit(event);
   }
 }

@@ -1,1 +1,46 @@
-<cl-chips [items]="chipItems"></cl-chips>
+<div class="container">
+  <div class="border p-1">
+    <h2>Simple Chips</h2>
+    <div class="row-item">
+      <h3 class="m-0 semibold">Code :</h3>
+      <code>
+        {{ code1 }}
+      </code>
+      <h3 class="m-0 semibold">Output:</h3>
+      <cl-chips [items]="chipItems1"></cl-chips>
+    </div>
+  </div>
+
+  <div class="border p-1">
+    <h2>Removable Chips</h2>
+    <div class="row-item">
+      <h3 class="m-0 semibold">Code :</h3>
+      <code>
+        {{ code2 }}
+      </code>
+      <h3 class="m-0 semibold">Output:</h3>
+      <cl-chips
+        [items]="chipItems2"
+        [isRemovable]="true"
+        (removed)="onRemoved($event)"
+      ></cl-chips>
+    </div>
+  </div>
+
+  <div class="border p-1">
+    <h2>Selectable Chips</h2>
+    <div class="row-item">
+      <h3 class="m-0 semibold">Code :</h3>
+      <code>
+        {{ code3 }}
+      </code>
+      <h3 class="m-0 semibold">Output:</h3>
+      <cl-chips
+        [items]="chipItems3"
+        [isSelectable]="true"
+        (selectionChange)="onSelectionChnage($event)"
+      ></cl-chips>
+      {{ selectedItem }}
+    </div>
+  </div>
+</div>

@@ -1,8 +1,9 @@
+
 export class Chips {
   constructor(
     public label: string,
     public value: any,
-    public color: ChipColor
+    public color: string
   ) {
     color = 'accent';
   }
@@ -19,5 +20,3 @@ export class Chips {
     }
   }
 }
-
-export type ChipColor = 'accent' | 'warn' | 'primary';
